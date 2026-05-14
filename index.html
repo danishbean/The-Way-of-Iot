@@ -3,85 +3,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TechSolusi - Profil Bisnis IoT</title>
+    <title>TechSolusi - Solusi Teknologi & IoT</title>
     
-    <!-- Bootstrap & Icons -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
     
     <style>
-        :root { --primary-blue: #0d6efd; --dark-footer: #1c1e21; }
-        body { font-family: 'Inter', sans-serif; }
-        
-        /* Hero Section sesuai screenshot pertama */
-        .hero-section { background-color: var(--primary-blue); color: white; padding: 60px 0; border-bottom-left-radius: 40px; border-bottom-right-radius: 40px; text-align: center; }
-        
-        /* Footer Dark Section sesuai Screenshot from 2026-05-14 18-26-30.png */
-        .footer-dark { background-color: var(--dark-footer); color: white; padding: 60px 0 30px 0; text-align: center; border-radius: 40px 40px 0 0; margin-top: 50px; }
-        
-        .btn-wa { background-color: #128c7e; color: white; border: none; padding: 12px 25px; border-radius: 10px; font-weight: 600; text-decoration: none; display: inline-flex; align-items: center; gap: 10px; }
-        .btn-email { background-color: transparent; color: white; border: 1px solid white; padding: 12px 25px; border-radius: 10px; font-weight: 600; text-decoration: none; display: inline-flex; align-items: center; gap: 10px; }
-        
-        .social-links a { color: white; font-size: 1.2rem; margin: 0 10px; text-decoration: none; opacity: 0.8; }
-        .social-links a:hover { opacity: 1; color: var(--primary-blue); }
-
-        /* Google Maps Styling */
-        .map-box { border-radius: 20px; overflow: hidden; margin-bottom: 30px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+        :root { --primary-blue: #0d6efd; --dark-text: #212529; }
+        body { font-family: 'Inter', sans-serif; color: var(--dark-text); }
+        .navbar-brand { font-weight: 800; letter-spacing: 1px; color: #000 !important; }
+        .brand-blue { color: var(--primary-blue); }
+        .hero-section { background-color: var(--primary-blue); color: white; padding: 80px 0; border-bottom-left-radius: 50px; border-bottom-right-radius: 50px; text-align: center; }
+        .hero-title { font-size: 3rem; font-weight: 800; margin-bottom: 20px; }
+        .btn-light-custom { background: white; color: #000; font-weight: 600; padding: 12px 30px; border-radius: 10px; border: none; margin-right: 15px; text-decoration: none; }
+        .btn-outline-custom { background: transparent; color: white; border: 2px solid white; font-weight: 600; padding: 12px 30px; border-radius: 10px; text-decoration: none; }
+        .social-icon { font-size: 1.5rem; color: var(--dark-text); margin: 0 10px; transition: 0.3s; }
+        .social-icon:hover { color: var(--primary-blue); }
+        .map-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+        .map-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0; }
+        .float-wa { position: fixed; bottom: 30px; right: 30px; background: #25d366; color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 30px; box-shadow: 0 4px 15px rgba(0,0,0,0.3); z-index: 1000; text-decoration: none; }
     </style>
 </head>
 <body>
 
-    <!-- Header / Nav -->
-    <nav class="navbar navbar-light bg-white py-3">
-        <div class="container text-center d-block">
-            <h4 class="fw-bold mb-0"><span class="text-primary">TECH</span>SOLUSI</h4>
+    <a href="https://wa.me/628123456789" class="float-wa"><i class="bi bi-whatsapp"></i></a>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-white py-3">
+        <div class="container border-bottom pb-2">
+            <a class="navbar-brand" href="#"><span class="brand-blue">TECH</span>SOLUSI</a>
         </div>
     </nav>
 
-    <!-- Hero -->
     <header class="hero-section">
         <div class="container px-4">
-            <h1 class="display-5 fw-bold">Solusi Teknologi & IoT</h1>
-            <p class="mb-0">Transformasi digital melalui sistem otomasi dan kustom IoT.</p>
+            <h1 class="hero-title">Solusi Teknologi & IoT</h1>
+            <p class="lead mb-4">Transformasi digital melalui sistem otomasi dan perangkat IoT kustom.</p>
+            <div class="d-flex justify-content-center flex-wrap gap-3">
+                <a href="#lokasi" class="btn btn-light-custom">Cek Lokasi</a>
+                <a href="https://wa.me/628123456789" class="btn btn-outline-custom">Hubungi Kami</a>
+            </div>
         </div>
     </header>
 
-    <!-- Google Maps (Aktif) -->
-    <section class="container mt-5 pt-4">
-        <h3 class="text-center fw-bold mb-4">Lokasi Workshop</h3>
-        <div class="map-box">
-            <!-- EDIT: Ganti URL src dengan link 'Embed Map' Anda jika ingin lokasi spesifik -->
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.2731872144344!2d106.8246949!3d-6.2276373!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNsKwMTMnMzkuNSJTIDEwNsKwNDknMjguOSJF!5e0!3m2!1sid!2sid!4v1621000000000!5m2!1sid!2sid" width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    <!-- Google Maps Section -->
+    <section id="lokasi" class="container py-5 mt-4">
+        <div class="text-center mb-4">
+            <h2 class="fw-bold">Lokasi Workshop Kami</h2>
+            <p class="text-muted">Kunjungi kami untuk konsultasi proyek secara langsung.</p>
+        </div>
+        <div class="map-container">
+            <!-- EDIT: Ganti URL src di bawah ini dengan link 'Embed Map' dari Google Maps Anda -->
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.018256220458!2d144.9631!3d-37.8136!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzfCsDQ4JzQ5LjAiUyAxNDTCsDU3JzQ3LjEiRQ!5e0!3m2!1sid!2sid!4v1621000000000!5m2!1sid!2sid" allowfullscreen="" loading="lazy"></iframe>
         </div>
     </section>
 
-    <!-- Footer Area sesuai Screenshot from 2026-05-14 18-26-30.png -->
-    <footer class="footer-dark">
-        <div class="container px-4">
-            <h2 class="fw-bold mb-3">Mulai Proyek Anda Sekarang</h2>
-            <p class="mb-5 text-secondary">Hubungi kami untuk mendapatkan penawaran sistem terbaik sesuai kebutuhan Anda.</p>
-            
-            <!-- Tombol Aktif -->
-            <div class="d-flex justify-content-center flex-wrap gap-3 mb-5">
-                <!-- GANTI NOMOR WA -->
-                <a href="https://wa.me/628123456789" class="btn-wa">
-                    <i class="bi bi-whatsapp"></i> WhatsApp
-                </a>
-                <!-- GANTI EMAIL -->
-                <a href="mailto:kontak@techsolusi.com" class="btn-email">
-                    <i class="bi bi-envelope"></i> Email
-                </a>
-            </div>
+    <!-- Social Media Section -->
+    <section class="container py-5 text-center">
+        <h3 class="fw-bold mb-4">Ikuti Media Sosial Kami</h3>
+        <div class="d-flex justify-content-center">
+            <a href="https://instagram.com/username_anda" class="social-icon"><i class="bi bi-instagram"></i></a>
+            <a href="https://facebook.com/username_anda" class="social-icon"><i class="bi bi-facebook"></i></a>
+            <a href="https://linkedin.com/in/username_anda" class="social-icon"><i class="bi bi-linkedin"></i></a>
+            <a href="https://youtube.com/@username_anda" class="social-icon"><i class="bi bi-youtube"></i></a>
+        </div>
+    </section>
 
-            <hr style="border-color: rgba(255,255,255,0.1);">
-
-            <div class="mt-4">
-                <p class="small text-secondary d-inline-block me-3">&copy; 2026 TechSolusi. Link Media Sosial:</p>
-                <span class="social-links">
-                    <a href="https://instagram.com/username"><i class="bi bi-instagram"></i></a>
-                    <a href="https://linkedin.com/in/username"><i class="bi bi-linkedin"></i></a>
-                </span>
-            </div>
+    <footer class="text-center py-4 text-muted border-top bg-light">
+        <div class="container">
+            <p class="mb-0">&copy; 2026 TechSolusi. All rights reserved.</p>
+            <small>Spesialis IoT & Instalasi Listrik Industri</small>
         </div>
     </footer>
 
