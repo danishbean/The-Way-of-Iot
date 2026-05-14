@@ -3,121 +3,150 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- GANTI JUDUL DI TAB BROWSER -->
-    <title>Profil Bisnis | Solusi Teknologi & IoT</title>
+    <title>TechSolusi - Solusi Teknologi & IoT</title>
     
-    <!-- Menggunakan Bootstrap untuk tampilan profesional instant -->
+    <!-- Link Bootstrap untuk tampilan seperti di screenshot -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
     
     <style>
-        :root { --primary-color: #0d6efd; --dark-bg: #121212; }
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
-        .hero-bg { background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'); 
-                   background-size: cover; background-position: center; color: white; padding: 100px 0; }
-        .card-service { border: none; border-bottom: 4px solid var(--primary-color); transition: 0.3s; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
-        .card-service:hover { transform: translateY(-10px); }
-        .wa-float { position: fixed; bottom: 20px; right: 20px; background: #25d366; color: white; 
-                    padding: 15px 25px; border-radius: 50px; text-decoration: none; font-weight: bold; z-index: 1000; box-shadow: 0 4px 10px rgba(0,0,0,0.3); }
+        /* Skema warna sesuai Screenshot from 2026-05-14 18-16-49.png */
+        :root {
+            --primary-blue: #0d6efd;
+            --dark-text: #212529;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--dark-text);
+        }
+
+        .navbar-brand {
+            font-weight: 800;
+            letter-spacing: 1px;
+            color: #000 !important;
+        }
+
+        .brand-blue { color: var(--primary-blue); }
+
+        /* Hero Section dengan warna biru powerful */
+        .hero-section {
+            background-color: var(--primary-blue);
+            color: white;
+            padding: 100px 0;
+            border-bottom-left-radius: 50px;
+            border-bottom-right-radius: 50px;
+            text-align: center;
+        }
+
+        .hero-title {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+        }
+
+        .hero-subtitle {
+            font-size: 1.25rem;
+            opacity: 0.9;
+            max-width: 700px;
+            margin: 0 auto 40px auto;
+        }
+
+        .btn-light-custom {
+            background: white;
+            color: #000;
+            font-weight: 600;
+            padding: 12px 30px;
+            border-radius: 10px;
+            border: none;
+            margin-right: 15px;
+        }
+
+        .btn-outline-custom {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+            font-weight: 600;
+            padding: 12px 30px;
+            border-radius: 10px;
+        }
+
+        /* Float WhatsApp Button */
+        .float-wa {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: #25d366;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            z-index: 1000;
+            text-decoration: none;
+        }
     </style>
 </head>
 <body>
 
-    <!-- Tombol WhatsApp Melayang -->
-    <!-- EDIT: Ganti nomor WA Anda di bawah ini -->
-    <a href="https://wa.me/628123456789" class="wa-float">
-        <i class="bi bi-whatsapp"></i> Chat Admin
+    <!-- Tombol WA -->
+    <a href="https://wa.me/628123456789" class="float-wa">
+        <i class="bi bi-whatsapp"></i>
     </a>
 
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
-        <div class="container">
-            <a class="navbar-brand fw-bold" href="#">PROFIL BISNIS</a>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white py-3">
+        <div class="container border-bottom pb-2">
+            <a class="navbar-brand" href="#">
+                <span class="brand-blue">TECH</span>SOLUSI
+            </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#tentang">Tentang</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#layanan">Layanan</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#kontak">Kontak</a></li>
-                </ul>
-            </div>
         </div>
     </nav>
 
-    <!-- Header / Hero Section -->
-    <header class="hero-bg text-center">
+    <!-- Hero Section -->
+    <header class="hero-section">
         <div class="container">
-            <!-- EDIT: Ganti Nama Bisnis Anda -->
-            <h1 class="display-3 fw-bold">NAMA BISNIS ANDA</h1>
-            <p class="lead mb-4">Penyedia Jasa Instalasi Listrik Industri, Otomasi Panel, dan Solusi IoT Real-Time</p>
-            <a href="#layanan" class="btn btn-primary btn-lg px-5">Lihat Layanan</a>
+            <h1 class="hero-title">Solusi Teknologi & IoT</h1>
+            <p class="hero-subtitle">
+                Transformasi digital melalui sistem otomasi, kontrol listrik, dan perangkat IoT kustom.
+            </p>
+            <div class="d-flex justify-content-center">
+                <a href="#proyek" class="btn btn-light-custom">Lihat Proyek</a>
+                <a href="https://wa.me/628123456789" class="btn btn-outline-custom">Konsultasi Gratis</a>
+            </div>
         </div>
     </header>
 
-    <!-- Tentang Kami -->
-    <section id="tentang" class="py-5">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-md-6">
-                    <h2>Tentang Kami</h2>
-                    <p>Kami adalah tim ahli yang berfokus pada efisiensi industri melalui teknologi. Dengan pengalaman dalam perakitan panel listrik dan pemrograman mikrokontroler (ESP32/Arduino), kami membantu bisnis Anda bertransformasi ke era digital.</p>
-                </div>
-                <div class="col-md-6 text-center">
-                    <i class="bi bi-cpu" style="font-size: 150px; color: #0d6efd;"></i>
-                </div>
+    <!-- Section Layanan Singkat -->
+    <section id="proyek" class="container py-5 mt-5 text-center">
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <i class="bi bi-cpu text-primary fs-1"></i>
+                <h4 class="mt-3">IoT Device</h4>
+                <p>Monitoring real-time untuk industri dan rumah tangga.</p>
+            </div>
+            <div class="col-md-4 mb-4">
+                <i class="bi bi-lightning text-primary fs-1"></i>
+                <h4 class="mt-3">Panel Listrik</h4>
+                <p>Instalasi dan maintenance sistem kontrol motor listrik.</p>
+            </div>
+            <div class="col-md-4 mb-4">
+                <i class="bi bi-globe text-primary fs-1"></i>
+                <h4 class="mt-3">Web Dashboard</h4>
+                <p>Pantau data sensor Anda kapan saja dan di mana saja.</p>
             </div>
         </div>
     </section>
 
-    <!-- Layanan / Portfolio Jasa -->
-    <section id="layanan" class="py-5 bg-light">
-        <div class="container">
-            <h2 class="text-center mb-5">Layanan Unggulan</h2>
-            <div class="row g-4">
-                
-                <!-- Jasa 1 -->
-                <div class="col-md-4">
-                    <div class="card card-service h-100 p-4">
-                        <i class="bi bi-lightning-charge-fill text-primary fs-1 mb-3"></i>
-                        <h4>Instalasi Panel</h4>
-                        <p>Perakitan panel kontrol listrik, sistem Zelio Logic, dan maintenance motor 3 phase.</p>
-                    </div>
-                </div>
-
-                <!-- Jasa 2 -->
-                <div class="col-md-4">
-                    <div class="card card-service h-100 p-4">
-                        <i class="bi bi-router-fill text-primary fs-1 mb-3"></i>
-                        <h4>Sistem IoT Custom</h4>
-                        <p>Pembuatan alat monitoring suhu, kelembaban, atau arus listrik berbasis web real-time.</p>
-                    </div>
-                </div>
-
-                <!-- Jasa 3 -->
-                <div class="col-md-4">
-                    <div class="card card-service h-100 p-4">
-                        <i class="bi bi-code-slash text-primary fs-1 mb-3"></i>
-                        <h4>Software Monitoring</h4>
-                        <p>Pembuatan dashboard website khusus untuk melihat data sensor secara langsung dan akurat.</p>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer / Kontak -->
-    <footer id="kontak" class="bg-dark text-white py-5">
-        <div class="container text-center">
-            <h2 class="mb-4">Hubungi Kami</h2>
-            <!-- EDIT: Ganti dengan alamat asli Anda agar QRIS disetujui -->
-            <p><i class="bi bi-geo-alt"></i> Alamat: Jl. Contoh No. 123, Kota Anda, Indonesia</p>
-            <p><i class="bi bi-envelope"></i> Email: kontak@bisnisanda.com</p>
-            <hr class="my-4 bg-secondary">
-            <p class="small text-secondary">&copy; 2026 Nama Bisnis Anda. Seluruh hak cipta dilindungi.</p>
-        </div>
+    <footer class="text-center py-4 text-muted border-top">
+        <small>&copy; 2026 TechSolusi. All rights reserved.</small>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
