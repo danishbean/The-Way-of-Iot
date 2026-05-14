@@ -3,52 +3,82 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Layanan Otomasi & IoT - Teknik Listrik</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- GANTI JUDUL TAB WEBSITE DI SINI -->
+    <title>Portfolio Jasa IoT & Listrik</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .hero-section { background: #1a1a1a; color: white; padding: 80px 0; }
+        .project-card { border: 1px solid #ddd; border-radius: 10px; padding: 20px; transition: 0.3s; height: 100%; }
+        .project-card:hover { box-shadow: 0 5px 15px rgba(0,0,0,0.2); }
+        .btn-wa { background-color: #25d366; color: white; border-radius: 50px; padding: 10px 25px; text-decoration: none; }
+    </style>
 </head>
-<body class="bg-gray-100 font-sans">
+<body>
 
-    <nav class="bg-blue-700 p-4 text-white">
-        <div class="container mx-auto flex justify-between items-center">
-            <h1 class="text-xl font-bold">Teknik Listrik & IoT</h1>
-            <ul class="flex gap-4 text-sm">
-                <li><a href="#" class="hover:underline">Beranda</a></li>
-                <li><a href="#produk" class="hover:underline">Produk</a></li>
-                <li><a href="#kontak" class="hover:underline">Hubungi Kami</a></li>
-            </ul>
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-dark bg-dark">
+        <div class="container">
+            <span class="navbar-brand mb-0 h1">SOLUSI TEKNIK</span> <!-- GANTI NAMA BRAND DI SINI -->
         </div>
     </nav>
 
-    <section class="container mx-auto mt-10 p-8 bg-white shadow-lg rounded-xl">
-        <h2 class="text-3xl font-extrabold text-blue-800">Solusi IoT & Kendali Motor Listrik</h2>
-        <p class="mt-4 text-gray-700 leading-relaxed">
-            Kami menyediakan layanan perancangan sistem monitoring industri berbasis IoT (ESP32) dan instalasi motor listrik yang terintegrasi dengan dashboard real-time.
-        </p>
+    <!-- HEADER -->
+    <header class="hero-section text-center">
+        <div class="container">
+            <!-- EDIT JUDUL UTAMA DI SINI -->
+            <h1 class="display-4 fw-bold">Pusat Pengembangan IoT & Panel Listrik</h1>
+            <p class="lead">Menyediakan jasa pembuatan alat monitoring real-time dan instalasi industri.</p>
+        </div>
+    </header>
+
+    <!-- DAFTAR PROYEK / JASA -->
+    <section class="container my-5">
+        <h2 class="text-center mb-5">Daftar Proyek & Layanan</h2>
         
-        <div class="mt-8 p-6 bg-blue-50 rounded-lg border border-blue-200">
-            <h3 class="font-bold text-blue-800 mb-2">Layanan Kami:</h3>
-            <ul class="list-disc ml-5 text-gray-600">
-                <li>Monitoring Data Sensor via Web</li>
-                <li>Instalasi & Perbaikan Panel Motor Listrik</li>
-                <li>Sistem Notifikasi Kerusakan Otomatis</li>
-            </ul>
+        <div class="row g-4">
+            
+            <!-- PROYEK 1: EDIT DI SINI -->
+            <div class="col-md-4">
+                <div class="project-card text-center">
+                    <h4>Monitoring Suhu Real-time</h4>
+                    <p>Sistem berbasis ESP32 untuk memantau suhu ruangan server melalui dashboard web secara langsung.</p>
+                </div>
+            </div>
+
+            <!-- PROYEK 2: EDIT DI SINI -->
+            <div class="col-md-4">
+                <div class="project-card text-center">
+                    <h4>Instalasi Panel Zelio</h4>
+                    <p>Perakitan dan pemograman smart relay Zelio untuk kontrol pompa otomatis industri.</p>
+                </div>
+            </div>
+
+            <!-- PROYEK 3: EDIT DI SINI -->
+            <div class="col-md-4">
+                <div class="project-card text-center">
+                    <h4>Maintenance Motor 3 Phase</h4>
+                    <p>Jasa perbaikan dan instalasi sistem starter motor listrik untuk kebutuhan pabrik.</p>
+                </div>
+            </div>
+
+            <!-- JIKA MAU TAMBAH DATA LAGI, COPY DARI <div class="col-md-4"> SAMPAI </div> LALU PASTE DI BAWAH INI -->
+
         </div>
     </section>
 
-    <section id="produk" class="container mx-auto mt-8 p-8 bg-white shadow-lg rounded-xl text-center">
-        <h2 class="text-2xl font-bold mb-4">Pembayaran Jasa & Layanan</h2>
-        <div class="border-4 border-dashed border-gray-200 p-10 rounded-lg inline-block">
-            <p class="text-gray-400 mb-4">Scan QRIS untuk Pembayaran</p>
-            <div class="bg-gray-100 w-40 h-40 mx-auto flex items-center justify-center">
-                <span class="text-xs text-gray-400 italic text-center px-2">Link QRIS Mayar Bapak Akan Muncul Di Sini</span>
+    <!-- KONTAK -->
+    <footer class="bg-light py-5 border-top">
+        <div class="container text-center">
+            <h3>Konsultasikan Proyek Anda</h3>
+            <p class="mb-4">Hubungi kami melalui WhatsApp untuk penawaran harga dan detail teknis.</p>
+            <!-- GANTI NOMOR WA DI SINI (Ganti 62812xxx) -->
+            <a href="https://wa.me/628123456789" class="btn-wa">Chat WhatsApp Sekarang</a>
+            
+            <div class="mt-5">
+                <p class="text-muted small">&copy; 2026 Solusi Teknik IoT. Semua Hak Dilindungi.</p>
             </div>
         </div>
-    </section>
-
-    <footer id="kontak" class="mt-12 p-10 bg-gray-800 text-white text-center">
-        <p class="font-bold">Hubungi Kami:</p>
-        <p class="text-sm mt-2">WhatsApp: 08XXXXXXXXXX</p>
-        <p class="text-xs text-gray-400 mt-4">&copy; 2026 Layanan Teknik IoT Indonesia</p>
     </footer>
 
 </body>
