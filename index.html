@@ -5,74 +5,148 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TechSolusi - Solusi Teknologi & IoT</title>
     
+    <!-- Link Bootstrap untuk tampilan seperti di screenshot -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
     
     <style>
-        :root { --primary-blue: #0d6efd; --dark-text: #212529; }
-        body { font-family: 'Inter', sans-serif; color: var(--dark-text); }
-        .navbar-brand { font-weight: 800; letter-spacing: 1px; color: #000 !important; }
+        /* Skema warna sesuai Screenshot from 2026-05-14 18-16-49.png */
+        :root {
+            --primary-blue: #0d6efd;
+            --dark-text: #212529;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--dark-text);
+        }
+
+        .navbar-brand {
+            font-weight: 800;
+            letter-spacing: 1px;
+            color: #000 !important;
+        }
+
         .brand-blue { color: var(--primary-blue); }
-        .hero-section { background-color: var(--primary-blue); color: white; padding: 80px 0; border-bottom-left-radius: 50px; border-bottom-right-radius: 50px; text-align: center; }
-        .hero-title { font-size: 3rem; font-weight: 800; margin-bottom: 20px; }
-        .btn-light-custom { background: white; color: #000; font-weight: 600; padding: 12px 30px; border-radius: 10px; border: none; margin-right: 15px; text-decoration: none; }
-        .btn-outline-custom { background: transparent; color: white; border: 2px solid white; font-weight: 600; padding: 12px 30px; border-radius: 10px; text-decoration: none; }
-        .social-icon { font-size: 1.5rem; color: var(--dark-text); margin: 0 10px; transition: 0.3s; }
-        .social-icon:hover { color: var(--primary-blue); }
-        .map-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
-        .map-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0; }
-        .float-wa { position: fixed; bottom: 30px; right: 30px; background: #25d366; color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 30px; box-shadow: 0 4px 15px rgba(0,0,0,0.3); z-index: 1000; text-decoration: none; }
+
+        /* Hero Section dengan warna biru powerful */
+        .hero-section {
+            background-color: var(--primary-blue);
+            color: white;
+            padding: 100px 0;
+            border-bottom-left-radius: 50px;
+            border-bottom-right-radius: 50px;
+            text-align: center;
+        }
+
+        .hero-title {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+        }
+
+        .hero-subtitle {
+            font-size: 1.25rem;
+            opacity: 0.9;
+            max-width: 700px;
+            margin: 0 auto 40px auto;
+        }
+
+        .btn-light-custom {
+            background: white;
+            color: #000;
+            font-weight: 600;
+            padding: 12px 30px;
+            border-radius: 10px;
+            border: none;
+            margin-right: 15px;
+        }
+
+        .btn-outline-custom {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+            font-weight: 600;
+            padding: 12px 30px;
+            border-radius: 10px;
+        }
+
+        /* Float WhatsApp Button */
+        .float-wa {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: #25d366;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            z-index: 1000;
+            text-decoration: none;
+        }
     </style>
 </head>
 <body>
 
-    <a href="https://wa.me/628123456789" class="float-wa"><i class="bi bi-whatsapp"></i></a>
+    <!-- Tombol WA -->
+    <a href="https://wa.me/628123456789" class="float-wa">
+        <i class="bi bi-whatsapp"></i>
+    </a>
 
+    <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-white py-3">
         <div class="container border-bottom pb-2">
-            <a class="navbar-brand" href="#"><span class="brand-blue">TECH</span>SOLUSI</a>
+            <a class="navbar-brand" href="#">
+                <span class="brand-blue">TECH</span>SOLUSI
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
         </div>
     </nav>
 
+    <!-- Hero Section -->
     <header class="hero-section">
-        <div class="container px-4">
+        <div class="container">
             <h1 class="hero-title">Solusi Teknologi & IoT</h1>
-            <p class="lead mb-4">Transformasi digital melalui sistem otomasi dan perangkat IoT kustom.</p>
-            <div class="d-flex justify-content-center flex-wrap gap-3">
-                <a href="#lokasi" class="btn btn-light-custom">Cek Lokasi</a>
-                <a href="https://wa.me/628123456789" class="btn btn-outline-custom">Hubungi Kami</a>
+            <p class="hero-subtitle">
+                Transformasi digital melalui sistem otomasi, kontrol listrik, dan perangkat IoT kustom.
+            </p>
+            <div class="d-flex justify-content-center">
+                <a href="#proyek" class="btn btn-light-custom">Lihat Proyek</a>
+                <a href="https://wa.me/628123456789" class="btn btn-outline-custom">Konsultasi Gratis</a>
             </div>
         </div>
     </header>
 
-    <!-- Google Maps Section -->
-    <section id="lokasi" class="container py-5 mt-4">
-        <div class="text-center mb-4">
-            <h2 class="fw-bold">Lokasi Workshop Kami</h2>
-            <p class="text-muted">Kunjungi kami untuk konsultasi proyek secara langsung.</p>
-        </div>
-        <div class="map-container">
-            <!-- EDIT: Ganti URL src di bawah ini dengan link 'Embed Map' dari Google Maps Anda -->
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.018256220458!2d144.9631!3d-37.8136!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzfCsDQ4JzQ5LjAiUyAxNDTCsDU3JzQ3LjEiRQ!5e0!3m2!1sid!2sid!4v1621000000000!5m2!1sid!2sid" allowfullscreen="" loading="lazy"></iframe>
-        </div>
-    </section>
-
-    <!-- Social Media Section -->
-    <section class="container py-5 text-center">
-        <h3 class="fw-bold mb-4">Ikuti Media Sosial Kami</h3>
-        <div class="d-flex justify-content-center">
-            <a href="https://instagram.com/username_anda" class="social-icon"><i class="bi bi-instagram"></i></a>
-            <a href="https://facebook.com/username_anda" class="social-icon"><i class="bi bi-facebook"></i></a>
-            <a href="https://linkedin.com/in/username_anda" class="social-icon"><i class="bi bi-linkedin"></i></a>
-            <a href="https://youtube.com/@username_anda" class="social-icon"><i class="bi bi-youtube"></i></a>
+    <!-- Section Layanan Singkat -->
+    <section id="proyek" class="container py-5 mt-5 text-center">
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <i class="bi bi-cpu text-primary fs-1"></i>
+                <h4 class="mt-3">IoT Device</h4>
+                <p>Monitoring real-time untuk industri dan rumah tangga.</p>
+            </div>
+            <div class="col-md-4 mb-4">
+                <i class="bi bi-lightning text-primary fs-1"></i>
+                <h4 class="mt-3">Panel Listrik</h4>
+                <p>Instalasi dan maintenance sistem kontrol motor listrik.</p>
+            </div>
+            <div class="col-md-4 mb-4">
+                <i class="bi bi-globe text-primary fs-1"></i>
+                <h4 class="mt-3">Web Dashboard</h4>
+                <p>Pantau data sensor Anda kapan saja dan di mana saja.</p>
+            </div>
         </div>
     </section>
 
-    <footer class="text-center py-4 text-muted border-top bg-light">
-        <div class="container">
-            <p class="mb-0">&copy; 2026 TechSolusi. All rights reserved.</p>
-            <small>Spesialis IoT & Instalasi Listrik Industri</small>
-        </div>
+    <footer class="text-center py-4 text-muted border-top">
+        <small>&copy; 2026 TechSolusi. All rights reserved.</small>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
